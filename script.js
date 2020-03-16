@@ -1,4 +1,5 @@
-//document.querySelector("h1").textContent = "I got a parcel";
+import { gallery as myStuff, settings } from "./module/gallery";
+document.querySelector("h1").textContent = settings.meaning;
 const data = [
   {
     i: "half-blood.jpg"
@@ -7,8 +8,4 @@ const data = [
     i: "hallows_1.jpg"
   }
 ];
-data.forEach(d => {
-  const t = document.createElement("img");
-  t.src = "images/" + d.i;
-  document.body.appendChild(t);
-});
+myStuff(data, document.body);
