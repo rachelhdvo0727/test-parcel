@@ -1,7 +1,11 @@
-h1 {
-  color: white;
-}
+$bg-color: lightblue;
 
 body {
-  background-color: blueviolet;
+  background-color: $bg-color;
+  h1 {
+    color: whitesmoke;
+    &:hover {
+      color: red;
+    }
+  }
 }
