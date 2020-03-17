@@ -1,11 +1,16 @@
-$bg-color: lightblue;
-
+@use 'sass/partials/vars';
+@use 'sass/partials/header';
+@use 'sass/partials/mixins';
 body {
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   h1 {
     color: whitesmoke;
+    @include mixins.flexible();
     &:hover {
       color: red;
     }
   }
+}
+img {
+  @include mixins.defaultBorder(20px);
 }
